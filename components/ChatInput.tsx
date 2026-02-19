@@ -9,9 +9,9 @@ type Props = {
 };
 
 export default function ChatInput({ loading, onSubmit, onClear }: Props) {
-  const [systemMessage, setSystemMessage] = useState("");
+  const [systemMessage, setSystemMessage] = useState("You are a precise assistant...");
   const [prompt, setPrompt] = useState("");
-  const [stream, setStream] = useState(false);
+  const [stream, setStream] = useState(true);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
